@@ -1,4 +1,3 @@
-/* Common styles for all screen sizes */
 body {
     margin: 0;
     padding: 0;
@@ -91,14 +90,11 @@ p {
 }
 }
 
-/* Media queries for different screen sizes */
 @media screen and (max-width: 768px) {
-    /* Adjust padding for smaller screens */
     .container {
         padding: 50px;
     }
 
-    /* Decrease font sizes for smaller screens */
     h1 {
         font-size: 30px;
     }
