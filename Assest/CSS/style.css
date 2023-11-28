@@ -4,6 +4,14 @@ body {
     font-family: Arial, sans-serif;
     background-color: #212121;
     color: #ffffff;
+    overflow: hidden;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .container {
@@ -34,6 +42,7 @@ p {
 .linkedin-icon:hover {
     color: #004471;
 }
+
 .lds-ellipsis {
     display: inline-block;
     position: relative;
@@ -65,29 +74,30 @@ p {
     left: 56px;
     animation: lds-ellipsis3 0.6s infinite;
 }
+
 @keyframes lds-ellipsis1 {
-0% {
-    transform: scale(0);
-}
-100% {
-    transform: scale(1);
-}
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 @keyframes lds-ellipsis3 {
-0% {
-    transform: scale(1);
-}
-100% {
-    transform: scale(0);
-}
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
 }
 @keyframes lds-ellipsis2 {
-0% {
-    transform: translate(0, 0);
-}
-100% {
-    transform: translate(24px, 0);
-}
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -106,4 +116,35 @@ p {
     .linkedin-icon {
         font-size: 40px;
     }
+}
+
+.meta-link {
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;  
+    display: inline-flex;
+    gap: 5px;
+    left: 10px;
+    padding: 10px 20px;
+    position: fixed;
+    text-decoration: none;
+    transition: background-color 600ms, border-color 600ms;
+    z-index: 10000;
+}
+.meta-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.meta-link > i, .meta-link > span {
+    height: 20px;
+    line-height: 20px;
+}
+.meta-link > span {
+    color: white;
+    font-family: "Rubik", sans-serif;
+    transition: color 600ms;
 }
