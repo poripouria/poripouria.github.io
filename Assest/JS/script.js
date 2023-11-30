@@ -152,3 +152,5 @@ function loop() {
 }
 
 window.onload = init;
+
+// Curser Source Code: https://github.com/codewithMUHILAN/Reels/tree/main/CURSERS/Curser%20Particles(12-09-23)
