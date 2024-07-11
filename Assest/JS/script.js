@@ -17,6 +17,11 @@ var mouseX = SCREEN_WIDTH * 0.5;
 var mouseY = SCREEN_HEIGHT * 0.5;
 var mouseIsDown = false;
 
+function openPDF(url) {
+    window.open(url, '_blank');
+    return false;
+}
+
 function init() {
 
     canvas = document.getElementById('world');
