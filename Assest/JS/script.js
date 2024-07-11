@@ -37,6 +37,12 @@ function init() {
         document.addEventListener('touchmove', documentTouchMoveHandler, false);
         window.addEventListener('resize', windowResizeHandler, false);
 
+        // Get LinkedIn icon position
+        var linkedInIcon = document.getElementById('linkedin-icon');
+        var rect = linkedInIcon.getBoundingClientRect();
+        mouseX = rect.left + rect.width / 2;
+        mouseY = rect.top + rect.height / 2;
+
         createParticles();
 
         windowResizeHandler();
